@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Loop in Code"
+title                    : "Ajari Coding"
 title_separator          : "-"
-subtitle                 : "Coding Journal and Tutorial"
+subtitle                 : "Bercerita Lewat Logika"
 name                     : "Faris Priadi"
-description              : "Programmer Python"
+description              : "Tutor dan Programmer Python"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Faris"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Programmer Python."
+  bio              : "Tutor and Programmer Python."
   location         : "ID"
   email            : "farispriadi@gmail.com"
   links:
