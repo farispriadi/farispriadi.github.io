@@ -119,31 +119,28 @@ author:
   location         : "ID"
   email            : "farispriadi@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:farispriadi@gmail.com"
     - label: "Youtube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@farispriadi"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/faris.priadi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/farispriadi"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url: "https://facebook.com/faris.priadi"
 
 # Site Footer
 footer:
   links:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/faris.priadi"
     - label: "Youtube"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@farispriadi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/farispriadi"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url: "https://facebook.com/faris.priadi"
 
 
 # Reading Files
