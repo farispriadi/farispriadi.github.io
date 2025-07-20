@@ -19,7 +19,7 @@ locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "Coding Escape"
 title_separator          : "-"
-subtitle                 : "How Teaching and Coding Shape Me""
+subtitle                 : "How Teaching and Coding Shape Me"
 name                     : "Faris Priadi"
 description              : "Tutor & Programmer Python"
 url                      : "https://farispriadi.github.io"
