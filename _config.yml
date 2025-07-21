@@ -23,7 +23,7 @@ subtitle                 : "How Teaching and Coding Shape Me"
 name                     : "Faris Priadi"
 description              : "Tutor & Programmer Python"
 url                      : "https://farispriadi.github.io"
-baseurl                  : "/"
+baseurl                  : # root domain
 repository               : "farispriadi/farispriadi.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
