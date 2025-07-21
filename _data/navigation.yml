@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Mulai Coding Python"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Blog"
     url: /year-archive/
   # - title: "Quick-Start Guide"
