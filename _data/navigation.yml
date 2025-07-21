@@ -5,7 +5,7 @@ main:
   - title: "Tutor"
     url: /about/
   - title: "Blog"
-    url: /year-archive/
+    url: /blog/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
