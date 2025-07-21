@@ -296,14 +296,6 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
 # Collections
 collections:
   docs:
@@ -343,3 +335,12 @@ defaults:
       toc_sticky: true
       sidebar:
         nav: "docs"
+
+        
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
