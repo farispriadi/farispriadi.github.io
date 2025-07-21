@@ -1,9 +1,7 @@
 # main links
 main:
   - title: "Mulai Belajar Coding"
-    url: /docs/quick-start-guide/
-  - title: "Tutor"
-    url: /about/
+    url: /docs/start-python-coding/
   - title: "Blog"
     url: /blog/
   # - title: "Quick-Start Guide"
