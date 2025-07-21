@@ -171,7 +171,7 @@ head_scripts:
   - /assets/js/your-custom-head-script.js
 ```
 
-Consult the [JavaScript documentation]({{ site.baseurl }}{% link _docs/17-javascript.md %}) for more information on working with theme scripts.
+Consult theJavaScript documentation for more information on working with theme scripts.
 {: .notice--info}
 
 ### Site default teaser image
@@ -1019,7 +1019,7 @@ And of course any default value can be overridden by settings in a post, page, o
 
 ## Outputting
 
-The default permalink style used by the theme is `permalink: /:categories/:title/`. If you have a post named `2016-01-01-my-post.md` with `categories: foo` in the YAML Front Matter, Jekyll will generate `_site/foo/my-post/index.html`.
+The default permalink style used by the theme is `permalink: /:categories/:title/`. 
 
 **Note:** If you plan on enabling breadcrumb links --- including category names in permalinks is a big part of how those are created.
 {: .notice--warning}
@@ -1163,10 +1163,10 @@ tag_archive:
 
 Which would create category and tag links in the breadcrumbs and page meta like: `/categories/#foo` and `/tags/#foo`.
 
-**Note:** these are simply hash (fragment) links into the full taxonomy index pages. For them to resolve properly, the category and tag index pages need to exist at [`/categories/index.html`](https://github.com/{{ site.repository }}/blob/master/docs/_pages/category-archive.md) (copy to `_pages/category-archive.md`) and [`/tags/index.html`](https://github.com/{{ site.repository }}/blob/master/docs/_pages/tag-archive.md) (copy to `_pages/tag-archive.md`).
+**Note:** these are simply hash (fragment) links into the full taxonomy index pages. For them to resolve properly, the category and tag index pages need to exist at.
 {: .notice--warning}
 
-If you have the luxury of using Jekyll Plugins, then [**jekyll-archives**][jekyll-archives] will create a better experience as discrete taxonomy pages would be generated, and their corresponding links would be "real" (not just hash/fragment links into a larger index). However, the plugin will not generate the taxonomy index pages (`category-archive.md` and `tag-archive.md`) so you'd still need to manually create them if you'd like to have them (see note above).
+If you have the luxury of using Jekyll Plugins, then [**jekyll-archives**][jekyll-archives] will create a better experience as discrete taxonomy pages would be generated, and their corresponding links would be "real" (not just hash/fragment links into a larger index).
 
 First, you'll need to make sure that the `jekyll-archives` plugin is installed. Either run `gem install jekyll-archives` or add the following to your `Gemfile`:
 
@@ -1178,7 +1178,7 @@ end
 
 Then run `bundle install`.
 
-Now that the plugin is installed, change `type` to `jekyll-archives` and apply the following [configurations](https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md):
+Now that the plugin is installed, change `type` to `jekyll-archives` and apply the following:
 
 ```yaml
 category_archive:
