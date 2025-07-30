@@ -17,9 +17,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ajari Coding"
+title                    : "Mula Coding"
 title_separator          : "-"
-subtitle                 : "Temukan Cara Belajar Coding Kamu"
+subtitle                 : "Coding dimulai dari sini"
 name                     : "Faris Priadi"
 description              : "Programmer & Tutor di Superprof"
 url                      : "https://farispriadi.github.io"
