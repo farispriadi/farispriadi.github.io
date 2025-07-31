@@ -15,22 +15,22 @@ intro:
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "placeholder image 1"
-    title: "Melatih Critical Thinking"
-    excerpt: "Melatih logika tidak hanya menghafal sintaks."
+    title: "Melatih Critical Thinking Sejak Dini"
+    excerpt: "Anak akan diajak berpikir logis dan menyusun solusi lewat aktivitas menyenangkan. Tanpa disadari, mereka belajar menganalisis, memecahkan masalah, dan membuat keputusan sendiri melalui proyek coding yang seru."
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "placeholder image 2"
-    title: "Membangun Project Nyata"
-    excerpt: "Langsung praktek dan ada hasilberupa mini project dari setiap sesi."
+    title: "Visual Programming dengan Scratch"
+    excerpt: "Metode belajar visual yang cocok untuk anak SMP. Anak bisa membuat game, animasi, atau cerita interaktif dengan drag-and-drop yang intuitif. Tidak perlu hafal sintaks, cukup berkreasi dan eksplorasi!"
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Menjelaskan dengan Analogi"
-    excerpt: "Penjelasan menggunakan analogi yang didesain secara personal tiap anak."
+    title: "Mini Project dengan Python"
+    excerpt: "Setelah memahami logika dasar dengan Scratch, anak dikenalkan dengan bahasa pemrograman Python melalui proyek sederhana. Fokus kami bukan pada teori rumit, tapi pada hasil nyata yang membanggakan."
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
