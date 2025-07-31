@@ -4,7 +4,7 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.0"
-  overlay_image: /assets/images/banner2.jpg
+  overlay_image: /assets/images/banner3.jpg
   actions:
     - label: "Daftar Sekarang!"
       url: "https://wa.me/6285601751281"
