@@ -24,7 +24,7 @@ feature_row:
     title: "Mini Project dengan Python"
     excerpt: "Setelah memahami logika dasar dengan Scratch, anak dikenalkan dengan bahasa pemrograman Python melalui proyek sederhana. Fokus kami bukan pada teori rumit, tapi pada hasil nyata yang membanggakan."
 feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2.jpg
+  - image_path: /assets/images/call_to_action.jpg
     alt: "Biaya Kursus"
     title: "Biaya Kursus : Rp. 99.000/jam"
     excerpt: 'Yuk mulai kursus coding dengan Kak Faris!'
@@ -86,10 +86,10 @@ gallery:
 
 {% include feature_row %}
 
+## Gaya Mengajar
 {% include video id="cVlllGYu35Y" provider="youtube" %}
 
-{% include feature_row id="feature_row2" type="left" %}
-
 ## Testimoni
-
 {% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
+
+{% include feature_row id="feature_row2" type="left" %}
