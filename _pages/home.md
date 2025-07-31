@@ -86,12 +86,12 @@ gallery:
 
 {% include feature_row %}
 
-{% include feature_row id="feature_row2" type="left" %}
+<!-- {% include feature_row id="feature_row2" type="left" %} -->
 
 # Kenalan Dengan Kak Faris
 {% include video id="cVlllGYu35Y" provider="youtube" %}
-
+<!-- 
 ## Testimoni Orang Tua
 {% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
-
+ -->
 
