@@ -10,7 +10,7 @@ header:
       url: "https://wa.me/6285601751281"
 excerpt: "Mulai belajar coding dengan membuat proyek game seru bareng Kak Faris!"
 intro: 
-  - excerpt: 'Belajar coding untuk anak SMP & SMA, sesuai gaya belajarnya. Fokus pada logika, problem solving, dan hasil nyata—bukan sekadar hafalan sintaks.'
+  - excerpt: 'Belajar coding untuk anak usia 12-16 tahun, sesuai gaya belajarnya. Fokus pada logika, problem solving, dan hasil nyata—bukan sekadar hafalan sintaks.'
 feature_row: 
   - image_path: assets/images/fitur1.jpg
     alt: "placeholder image 1"
