@@ -91,7 +91,10 @@ gallery:
 # Kenalan Dengan Kak Faris
 {% include video id="cVlllGYu35Y" provider="youtube" %}
 
-## Testimoni Orang tua
+## Testimoni Orang tu
 {% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
 
+## 
+
+{% include feature_row id="feature_row2" type="left" %}
 
