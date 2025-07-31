@@ -8,10 +8,10 @@ header:
   actions:
     - label: "Daftar Sekarang!"
       url: "https://wa.me/6285601751281"
-excerpt: "Yuk mulai belajar coding dengan membuat proyek game seru bareng Kak Faris!"
+excerpt: "Mulai belajar coding dengan membuat proyek game seru bareng Kak Faris!"
 intro: 
   - excerpt: 'Belajar coding untuk anak SMP & SMA, sesuai gaya belajarnya. Fokus pada logika, problem solving, dan hasil nyata—bukan sekadar hafalan sintaks.'
-feature_row:
+feature_row: 
   - image_path: assets/images/fitur1.jpg
     alt: "placeholder image 1"
     title: "Melatih Critical Thinking Sejak Dini"
