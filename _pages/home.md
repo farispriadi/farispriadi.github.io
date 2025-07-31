@@ -31,9 +31,6 @@ feature_row:
   - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
     title: "Mini Project dengan Python"
     excerpt: "Setelah memahami logika dasar dengan Scratch, anak dikenalkan dengan bahasa pemrograman Python melalui proyek sederhana. Fokus kami bukan pada teori rumit, tapi pada hasil nyata yang membanggakan."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}
