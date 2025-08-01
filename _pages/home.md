@@ -57,7 +57,7 @@ gallery:
 
 {% include feature_row id="feature_row2" type="left" %}
 
-## Testimoni Orang Tua
+<span style="font-size: 32px;">Testimoni Orang Tua</span>
 {% include gallery id="gallery" caption="" %}
 
 
