@@ -26,60 +26,24 @@ feature_row:
 feature_row2:
   - image_path: /assets/images/call_to_action.jpg
     alt: "Hubungi Tutor"
-    title: "Bingung mulai belajar coding?"
+    title: "Sudah Siap Belajar Coding?"
     excerpt: 'Yuk mulai kursus coding dengan Kak Faris!'
     url: "https://wa.me/6285601751281"
     btn_label: "Hubungi Kak Faris"
     btn_class: "btn--primary"
 gallery:
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
+  - url: #
+    image_path: /assets/images/testimoni1.png
     alt: "placeholder image 1"
     title: "Image 1 title caption"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - url: #
+    image_path: /assets/images/testimoni2.png
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: /assets/images/unsplash-gallery-image-3-th.jpg
+  - url: #
+    image_path: /assets/images/testimoni3.png
     alt: "placeholder image 3"
     title: "Image 3 title caption"
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 4"
-    title: "Image 4 title caption"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 5"
-    title: "Image 5 title caption"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    alt: "placeholder image 6"
-    title: "Image 6 title caption"
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 7"
-    title: "Image 7 title caption"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 8"
-    title: "Image 8 title caption"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    alt: "placeholder image 9"
-    title: "Image 9 title caption"
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 10"
-    title: "Image 10 title caption"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 11"
-    title: "Image 11 title caption"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    alt: "placeholder image 12"
-    title: "Image 12 title caption"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -93,8 +57,7 @@ gallery:
 
 {% include feature_row id="feature_row2" type="left" %}
 
-<!-- 
 ## Testimoni Orang Tua
 {% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
- -->
+
 
