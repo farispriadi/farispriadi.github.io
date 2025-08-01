@@ -58,6 +58,6 @@ gallery:
 {% include feature_row id="feature_row2" type="left" %}
 
 ## Testimoni Orang Tua
-{% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
+{% include gallery id="gallery" caption="" %}
 
 
