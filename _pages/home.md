@@ -6,7 +6,7 @@ header:
   overlay_filter: "0.0"
   overlay_image: /assets/images/banner3.jpg
   actions:
-    - label: "Daftar Sekarang!"
+    - label: "Daftar Kursus!"
       url: "https://wa.me/6285601751281"
 excerpt: "Mulai belajar coding dengan membuat proyek game seru bareng Kak Faris!"
 intro: 
@@ -25,8 +25,8 @@ feature_row:
     excerpt: "Setelah memahami logika dasar dengan Scratch, anak dikenalkan dengan bahasa pemrograman Python melalui proyek sederhana. Fokus kami bukan pada teori rumit, tapi pada hasil nyata yang membanggakan."
 feature_row2:
   - image_path: /assets/images/call_to_action.jpg
-    alt: "Biaya Kursus"
-    title: "Biaya Kursus : Rp. 99.000/jam"
+    alt: "Hubungi Tutor"
+    title: "Bingung mulai belajar coding?"
     excerpt: 'Yuk mulai kursus coding dengan Kak Faris!'
     url: "https://wa.me/6285601751281"
     btn_label: "Hubungi Kak Faris"
@@ -86,10 +86,13 @@ gallery:
 
 {% include feature_row %}
 
-<!-- {% include feature_row id="feature_row2" type="left" %} -->
-
 # Kenalan Dengan Kak Faris
 {% include video id="cVlllGYu35Y" provider="youtube" %}
+
+---
+
+{% include feature_row id="feature_row2" type="left" %}
+
 <!-- 
 ## Testimoni Orang Tua
 {% include gallery id="gallery" caption="This is a second gallery example with images hosted externally." %}
