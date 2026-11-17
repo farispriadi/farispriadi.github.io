@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description" content="Les privat coding online bersama Faris Priadi. Belajar Python dari fundamental hingga project-based, atau bedah kode untuk mahasiswa dan peneliti.">
+  <title>Faris Priadi — Les Privat Coding & Bedah Kode</title>
+  <style>
+/* Simple Professional Blue — neutral surfaces, high readability, restrained accents */
+:root {
+  --ink:#1B2B42;
+  --deep:#203D60;
+  --muted:#52647A;
+  --line:#DFE6EF;
+  --paper:#FFFFFF;
+  --white:#FFFFFF;
+  --accent:#1B5CA8;
+  --soft-blue:#EEF4FB;
+  --card:#F8FAFC;
+  --shadow:0 10px 30px rgba(27,49,80,.045);
+  --radius:16px;
+}
+*, *::before, *::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:88px; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+a { color:inherit; text-decoration:none; }
+button, input, select, textarea { font:inherit; }
+button, a { -webkit-tap-highlight-color:transparent; }
+button { cursor:pointer; }
+:focus-visible { outline:3px solid #3B82F6; outline-offset:3px; }
+.shell { width:min(1120px,calc(100% - 48px)); margin-inline:auto; }
+.muted { color:var(--muted); }
+.eyebrow { color:var(--accent); font-size:12px; font-weight:750; letter-spacing:.095em; text-transform:uppercase; }
+.eyebrow.light { color:var(--accent); }
+h1, h2, h3, p { margin:0; }
+h1, h2, h3 { letter-spacing:-.035em; line-height:1.22; }
+h2 { font-size:clamp(29px,3.4vw,40px); font-weight:750; }
+h3 { font-size:21px; font-weight:730; }
+p + p { margin-top:11px; }
+.topline { display:none; }
+header { position:sticky; top:0; z-index:30; border-bottom:1px solid var(--line); background:rgba(255,255,255,.98); backdrop-filter:blur(10px); }
+.nav { min-height:75px; display:flex; align-items:center; justify-content:space-between; gap:23px; }
+.brand { display:inline-flex; align-items:center; gap:10px; white-space:nowrap; font-weight:800; font-size:18px; letter-spacing:-.05em; }
+.mark { width:37px; height:37px; display:grid; place-items:center; border-radius:9px; background:#EAF2FC; color:#174B86; font-weight:800; letter-spacing:-.08em; font-size:16px; }
+nav { display:flex; gap:26px; align-items:center; color:#475D76; font-size:13px; font-weight:650; }
+nav a:hover { color:var(--accent); }
+.nav-right { display:flex; align-items:center; gap:12px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; background:var(--accent); color:#fff; border:1px solid var(--accent); border-radius:9px; padding:12px 18px; font-size:14px; font-weight:720; line-height:1.3; transition:background .16s ease; }
+.btn:hover { background:#164C8B; color:white; }
+.btn.dark { background:var(--accent); color:#fff; border-color:var(--accent); }
+.btn.dark:hover { background:#164C8B; }
+.btn.outline { background:#fff; border-color:#B7C7DA; color:var(--deep); }
+.btn.outline:hover { background:#F3F7FB; color:var(--deep); }
+.btn.white { background:#fff; color:var(--ink); }
+.btn.small { padding:10px 15px; font-size:13px; }
+.menu { display:none; background:transparent; border:1px solid var(--line); border-radius:9px; padding:7px 10px; color:var(--ink); font-size:20px; line-height:1; }
+.hero { position:relative; background:#fff; overflow:hidden; }
+.hero::after { display:none; }
+.hero-grid { display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:55px; padding-block:91px 95px; }
+.hero h1 { max-width:690px; font-size:clamp(39px,4.9vw,59px); font-weight:780; }
+.hero h1 em { font-style:normal; color:var(--accent); }
+.hero-copy { margin-top:22px; max-width:550px; color:var(--muted); font-size:16px; line-height:1.8; }
+.hero-actions { display:flex; gap:11px; flex-wrap:wrap; margin-top:28px; }
+.hero-foot { margin-top:27px; display:flex; flex-wrap:wrap; gap:9px 19px; font-size:13px; color:#4D6075; font-weight:600; }
+.hero-foot span::before { content:'✓'; font-weight:800; margin-right:7px; color:var(--accent); }
+.preview-wrap { position:relative; padding:0; }
+.float-label, .stat-bubble { display:none; }
+.editor { background:#fff; color:var(--ink); border:1px solid #CBD7E4; border-radius:14px; box-shadow:var(--shadow); overflow:hidden; transform:none; }
+.editor-top { background:#F5F7FA; border-bottom:1px solid var(--line); display:flex; align-items:center; gap:7px; padding:13px 17px; }
+.dot { width:8px; height:8px; border-radius:50%; background:#9BAFC4; }
+.dot:nth-child(2) { background:#B6C5D5; }
+.dot:nth-child(3) { background:#D1DAE5; }
+.file-name { margin-left:auto; color:#52647A; font-size:11px; font-weight:650; }
+.editor-mode { display:flex; align-items:center; gap:7px; padding:14px 17px 0; }
+.mode-btn { border:1px solid var(--line); border-radius:7px; padding:7px 10px; background:#fff; color:#4C6076; font-size:11px; font-weight:700; }
+.mode-btn[aria-pressed='true'] { border-color:#B2C9E5; background:#EAF2FC; color:#174B86; }
+pre.code { padding:20px 20px 14px; margin:0; min-height:216px; height:auto; overflow:auto; color:#293C55; font:13px/1.85 'SFMono-Regular',Consolas,'Liberation Mono',monospace; white-space:pre-wrap; }
+.code .keyword { color:#184F96; font-weight:700; }
+.code .literal { color:#4D5971; }
+.code .function { color:#155B92; }
+.code .comment { color:#586D80; }
+.output { margin:5px 16px 16px; background:#F6F9FC; border:1px solid var(--line); border-radius:9px; padding:12px 14px; color:#2F475E; }
+.output-title { font-size:10px; letter-spacing:.1em; color:#596C7F; font-weight:760; text-transform:uppercase; margin-bottom:4px; }
+.output-value { font-family:Consolas,monospace; font-size:12px; }
+section { padding-block:81px; }
+.section-intro { max-width:730px; margin-bottom:31px; }
+.section-intro h2 { margin-top:10px; }
+.section-intro p { margin-top:14px; color:var(--muted); font-size:15px; }
+#layanan { background:#F8FAFC; border-top:1px solid #EFF2F6; }
+.service-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.service { border-radius:14px; padding:31px; min-height:340px; display:flex; flex-direction:column; align-items:flex-start; position:relative; overflow:hidden; background:#fff !important; color:var(--ink) !important; border:1px solid #DCE5EF; box-shadow:0 3px 10px rgba(25,45,68,.025); }
+.service.navy::after, .service.ice::after { display:none; }
+.service > *:not(.ornament) { position:relative; z-index:1; }
+.service-tag { display:inline-flex; align-items:center; gap:8px; background:#F0F5FB; color:#254C78; border:0; border-radius:7px; padding:6px 11px; font-size:11px; font-weight:720; opacity:1; }
+.service h3 { font-size:29px; margin-top:25px; }
+.service p { max-width:420px; margin-top:12px; color:var(--muted); opacity:1; font-size:15px; }
+.chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:21px; }
+.chips span { border:1px solid #DCE6EF; background:#FAFCFE; color:#4A5E76; opacity:1; padding:5px 9px; border-radius:6px; font-size:11px; font-weight:650; }
+.service a { display:inline-flex; gap:9px; align-items:center; font-size:14px; font-weight:730; margin-top:auto; padding-top:28px; color:var(--accent); }
+.service a:hover { text-decoration:underline; text-underline-offset:4px; }
+.how { background:#fff; border-block:1px solid #E8EDF3; }
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:27px; margin-top:34px; }
+.step { border-top:1px solid var(--line); padding-top:22px; }
+.step-num { display:inline-grid; width:37px; height:37px; place-items:center; border-radius:9px; background:#EFF4FA; color:#204F82; font-weight:780; font-size:13px; }
+.step h3 { margin-top:16px; font-size:20px; }
+.step p { margin-top:10px; font-size:14px; color:var(--muted); }
+.projects { background:#F8FAFC; }
+.project-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:19px; }
+.project { background:#fff; border:1px solid var(--line); border-radius:13px; overflow:hidden; }
+.project-visual { position:relative; height:155px; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; }
+.project-visual.game, .project-visual.data, .project-visual.review { background:#EFF4FA; }
+.project-visual .tile { background:#fff; border-radius:9px; padding:13px 20px; border:1px solid #DAE4EE; box-shadow:none; font-weight:750; font-size:14px; transform:none; }
+.project-visual.data .tile, .project-visual.review .tile { transform:none; }
+.project-visual.review .tile { font-family:Consolas,monospace; }
+.bar-chart { display:flex; height:60px; align-items:flex-end; gap:5px; margin-bottom:6px; }
+.bar-chart i { width:17px; background:#678EBA; border-radius:3px 3px 0 0; }
+.bar-chart i:nth-child(1) { height:24px; }.bar-chart i:nth-child(2) { height:45px; }.bar-chart i:nth-child(3) { height:32px; }.bar-chart i:nth-child(4) { height:59px; }
+.project-body { padding:22px 22px 25px; }
+.project-body small { color:#325C86; font-size:11px; font-weight:760; text-transform:uppercase; letter-spacing:.04em; }
+.project-body h3 { font-size:19px; margin-top:10px; }
+.project-body p { font-size:13px; color:var(--muted); margin-top:9px; }
+.note { margin-top:17px; font-size:12px; color:#52647A; }
+.about-grid { display:grid; grid-template-columns:.75fr 1.25fr; gap:73px; align-items:center; }
+.about-art { background:#F1F5FA; min-height:305px; border:1px solid #E4EBF3; border-radius:13px; display:grid; place-items:center; position:relative; overflow:hidden; }
+.about-art::before { display:none; }
+.about-art .logo-big { font-size:80px; line-height:1; letter-spacing:-.14em; font-weight:850; color:#31577D; transform:none; }
+.about-art span { position:absolute; bottom:24px; right:24px; background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 12px; font-size:11px; font-weight:750; transform:none; }
+.about h2 { margin:13px 0 19px; }
+.about p { color:var(--muted); }
+.about p strong { color:var(--ink); }
+.values { display:flex; flex-wrap:wrap; gap:9px; margin-top:22px; }
+.values span { background:#EEF4FA; border-radius:7px; padding:7px 11px; color:#315A84; font-size:12px; font-weight:690; }
+.faq { background:#F8FAFC; border-top:1px solid var(--line); }
+.faq-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:77px; }
+.faq-list { border-top:1px solid var(--line); }
+details { border-bottom:1px solid var(--line); padding:19px 0; }
+summary { list-style:none; display:flex; justify-content:space-between; align-items:center; gap:14px; cursor:pointer; font-weight:720; line-height:1.5; font-size:15px; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:'+'; font-size:22px; color:var(--accent); font-weight:450; }
+details[open] summary::after { content:'−'; }
+details p { color:var(--muted); font-size:14px; margin-top:12px; padding-right:25px; }
+.contact { background:#F1F5FA; color:var(--ink); border-top:1px solid var(--line); position:relative; overflow:hidden; }
+.contact::before { display:none; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:63px; position:relative; z-index:1; align-items:center; }
+.contact h2 { margin-top:12px; }
+.contact p { margin-top:16px; color:var(--muted); max-width:440px; }
+.contact-points { display:grid; gap:10px; margin-top:25px; font-size:14px; color:#405670; }
+.contact-points span::before { content:'✓'; color:var(--accent); margin-right:10px; }
+.wa-panel { background:#fff; border:1px solid #DBE4EE; color:var(--ink); border-radius:14px; padding:25px; box-shadow:var(--shadow); }
+.wa-panel-top { display:flex; align-items:center; gap:8px; color:#425D78; letter-spacing:.09em; font-size:11px; font-weight:760; margin:0 0 16px 2px; }
+.wa-online-dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent); }
+.wa-choice { display:flex; align-items:center; gap:13px; border:1px solid var(--line); border-radius:10px; padding:18px 15px; margin-bottom:10px; transition:background .16s,border-color .16s; }
+.wa-choice:hover { border-color:#ADC4DC; background:#F7FAFD; }
+.wa-icon { width:38px; height:38px; display:grid; place-items:center; background:#EDF4FC; color:#205A93; border-radius:8px; font-size:12px; font-weight:850; flex-shrink:0; }
+.wa-choice-copy { display:grid; gap:3px; flex:1; min-width:0; }
+.wa-choice-copy strong { font-size:15px; letter-spacing:-.02em; }
+.wa-choice-copy small { font-size:12px; color:var(--muted); line-height:1.5; }
+.wa-arrow { font-size:19px; color:var(--accent); }
+.wa-panel-bottom { display:flex; align-items:center; gap:11px; padding:12px 3px 0; color:var(--muted); font-size:11px; line-height:1.6; }
+.wa-mark { width:33px; height:33px; display:grid; place-items:center; border-radius:8px; background:#EEF4FA; color:var(--accent); font-size:20px; font-weight:800; flex-shrink:0; }
+.wa-demo-note { margin-top:14px!important; max-width:none!important; background:#FFFAEB; border:1px solid #EAD8AA; color:#715D30!important; padding:12px; border-radius:8px; font-size:12px; line-height:1.7; }
+.wa-demo-note code { font-family:Consolas,monospace; }
+.wa-float { position:fixed; right:21px; bottom:20px; z-index:50; display:inline-flex; gap:10px; align-items:center; border-radius:100px; padding:9px 15px; background:var(--accent); color:white; box-shadow:0 7px 18px rgba(15,71,126,.18); font-size:12px; font-weight:770; }
+.wa-float:hover { background:#164C8B; }
+.wa-float>span:first-child { display:grid; place-items:center; font-size:20px; width:26px; height:26px; background:#FFFFFF20; border-radius:100px; }
+footer { background:#fff; border-top:1px solid var(--line); padding:26px 0; color:#596B7E; font-size:12px; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:15px; }
+.footer-inner a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+@media(max-width:960px) { nav { gap:16px; } .hero-grid { gap:26px; } .hero h1 { font-size:45px; } .service { padding:27px; } .service h3 { font-size:26px; } .about-grid,.faq-grid {gap:38px;} .contact-grid {gap:37px;} }
+@media(max-width:700px) {
+ .shell { width:min(100% - 36px,540px); }
+ .nav { min-height:65px; }
+ .nav .btn { display:none; }
+ .menu { display:block; }
+ nav { display:none; position:absolute; top:65px; left:0; right:0; padding:20px 24px; background:#fff; border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; gap:15px; box-shadow:0 12px 18px #122B4510; }
+ nav.open { display:flex; }
+ .hero-grid,.service-grid,.about-grid,.faq-grid,.contact-grid { grid-template-columns:1fr; }
+ .hero-grid { padding-block:59px 67px; gap:34px; }
+ .hero h1 { font-size:clamp(35px,9vw,49px); }
+ .hero-copy { font-size:15px; }
+ .preview-wrap { max-width:510px; }
+ section { padding-block:65px; }
+ .section-intro { margin-bottom:24px; }
+ .service { min-height:310px; }
+ .steps,.project-grid { grid-template-columns:1fr; gap:17px; }
+ .step { padding-top:18px; }
+ .project-visual { height:150px; }
+ .about-art { min-height:220px; }
+ .faq-grid { gap:22px; }
+ .contact-grid { gap:29px; }
+ .wa-panel { padding:17px; }
+ .wa-choice { padding:15px 11px; }
+ .wa-float { right:12px; bottom:12px; padding:9px 12px; }
+ .wa-float>span:nth-child(2){display:none;}
+}
+@media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .btn,.wa-choice{transition:none;} }
+  </style>
+</head>
+<body>
+  <div class="topline">✦ Sesi privat online · Belajar sesuai kebutuhan dan kecepatan masing-masing</div>
+  <header>
+    <div class="shell nav">
+      <a class="brand" href="#beranda" aria-label="Faris Priadi, kembali ke atas"><span class="mark">&lt;/&gt;</span> Faris Priadi<span style="color:#1B5CA8">.</span></a>
+      <nav id="nav-links" aria-label="Navigasi utama">
+        <a href="#layanan">Layanan</a><a href="#metode">Metode</a><a href="#contoh">Contoh Proyek</a><a href="#tentang">Tentang</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-right"><a class="btn dark small" data-wa="umum" href="#konsultasi">Konsultasi via WA ↗</a><button class="menu" id="menu-btn" aria-controls="nav-links" aria-expanded="false" aria-label="Buka menu">☰</button></div>
+    </div>
+  </header>
+  <main>
+    <div class="hero" id="beranda">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow">PRIVATE CODING TUTOR · ONLINE</div>
+          <h1 style="margin-top:21px">Belajar coding dengan <em>arah.</em><br>Bukan sekadar ikut tutorial.</h1>
+          <p class="hero-copy">Dari membangun fondasi Python dan proyek pertama, sampai membedah kode penelitian yang rumit. Belajar 1-on-1 dengan pendekatan yang berangkat dari masalah nyata.</p>
+          <div class="hero-actions"><a class="btn dark" href="#belajar">Saya ingin belajar coding <span aria-hidden="true">↗</span></a><a class="btn outline" href="#bedah">Saya ingin bedah kode <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-foot"><span>Privat 1-on-1</span><span>Problem-first</span><span>Project-based</span></div>
+        </div>
+        <div class="preview-wrap" aria-label="Contoh interaktif tampilan kode">
+          <div class="float-label">Belajar dengan praktik</div>
+          <div class="editor">
+            <div class="editor-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="file-name" id="editor-filename">quiz_python.py</span></div>
+            <div class="editor-mode"><button class="mode-btn" type="button" data-mode="belajar" aria-pressed="true">Mini Project</button><button class="mode-btn" type="button" data-mode="bedah" aria-pressed="false">Bedah Kode</button></div>
+            <pre class="code" id="code-demo" aria-live="polite"><span class="comment"># Mini project: kuis sederhana</span>
+pertanyaan = <span class="literal">"2 + 3 = ?"</span>
+jawaban = <span class="function">input</span>(pertanyaan)
+
+<span class="keyword">if</span> jawaban == <span class="literal">"5"</span>:
+    <span class="function">print</span>(<span class="literal">"Hebat! Benar 🎉"</span>)
+<span class="keyword">else</span>:
+    <span class="function">print</span>(<span class="literal">"Coba lagi"</span>)</pre>
+            <div class="output"><div class="output-title">Output / hasil</div><div class="output-value" id="demo-output">&gt; 2 + 3 = ? 5<br>&gt; Hebat! Benar 🎉</div></div>
+          </div>
+          <div class="stat-bubble"><strong>Pahami → Coba → Perbaiki</strong><small>Bukan copy-paste, tetapi mengerti prosesnya.</small></div>
+        </div>
+      </div>
+    </div>
+    <section id="layanan">
+      <div class="shell">
+        <div class="section-intro"><div class="eyebrow">PILIH JALUR SESUAI KEBUTUHAN</div><h2>Dua kebutuhan.<br>Satu tujuan: benar-benar paham.</h2><p>Mulai dari nol atau sedang menghadapi kode yang kompleks? Pilih jalur yang paling menggambarkan tantangan Anda.</p></div>
+        <div class="service-grid">
+          <article class="service navy" id="belajar"><div class="service-tag">01 / Untuk pemula & SMP–SMA</div><h3>Belajar Coding<br>dari Nol</h3><p>Bangun logika pemrograman, pahami konsep dengan analogi, lalu buat proyek yang bisa dijalankan dan dijelaskan sendiri.</p><div class="chips"><span>Python Fundamental</span><span>Logika & Algoritma</span><span>Mini Project</span></div><a href="#konsultasi" data-wa="belajar">Konsultasi Belajar Coding via WA <span aria-hidden="true">↗</span></a></article>
+          <article class="service ice" id="bedah"><div class="service-tag">02 / Untuk mahasiswa & peneliti</div><h3>Bedah Kode<br>& Pendampingan</h3><p>Telusuri error, pahami alur program, dan analisis hasil kode untuk tugas, proyek, atau riset secara sistematis.</p><div class="chips"><span>Debugging</span><span>Data Analysis</span><span>Machine Learning</span></div><a href="#konsultasi" data-wa="bedah">Konsultasi Bedah Kode via WA <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+    <section class="how" id="metode">
+      <div class="shell"><div class="section-intro"><div class="eyebrow">CARA BELAJAR</div><h2>Mulai dari masalah.<br>Bukan dari hafalan sintaks.</h2><p>Alur sesi dirancang agar konsep teknis terasa masuk akal sebelum masuk ke baris kode.</p></div>
+        <div class="steps">
+          <div class="step"><span class="step-num">01</span><h3>Lihat tujuan akhirnya</h3><p>Kenali hasil yang ingin dibuat, atau masalah kode yang perlu dipecahkan. Kita mulai dari konteks yang konkret.</p></div>
+          <div class="step"><span class="step-num">02</span><h3>Pahami cara kerjanya</h3><p>Urai logika dan konsep dengan analogi sehari-hari, gambar alur, dan contoh sederhana.</p></div>
+          <div class="step"><span class="step-num">03</span><h3>Praktik dan refleksi</h3><p>Tulis atau periksa kode, lakukan eksperimen, lalu jelaskan kembali alasan di balik solusinya.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="contoh">
+      <div class="shell"><div class="section-intro"><div class="eyebrow">GAMBARAN MATERI</div><h2>Contoh hal yang bisa kita kerjakan bersama.</h2><p>Dari proyek ringan sampai analisis kode teknis. Ruang lingkup selalu disesuaikan dengan kemampuan dan kebutuhan peserta.</p></div>
+        <div class="project-grid">
+          <article class="project"><div class="project-visual game"><div class="tile">🎮 &nbsp; Kuis Interaktif<br><small style="font-weight:500;color:#6c93b8">Skor: 3 / 3 ⭐</small></div></div><div class="project-body"><small>Fundamental · Pemula</small><h3>Game & logika Python</h3><p>Variabel, percabangan, perulangan, dan fungsi dipahami lewat mini project.</p></div></article>
+          <article class="project"><div class="project-visual data"><div class="tile"><div class="bar-chart"><i></i><i></i><i></i><i></i></div><span style="font-size:11px">Analisis data sederhana</span></div></div><div class="project-body"><small>Mahasiswa · Analisis Data</small><h3>Dari CSV ke insight</h3><p>Memahami alur data, memeriksa data, dan membuat visualisasi yang jelas.</p></div></article>
+          <article class="project"><div class="project-visual review"><div class="tile"><span style="color:#b85a5a">− value = "5"</span><br><span style="color:#287bc4">+ value = int("5")</span></div></div><div class="project-body"><small>Mahasiswa · Code Review</small><h3>Menemukan akar error</h3><p>Telusuri input, tipe data, alur program, dan pengujian untuk memahami perbaikannya.</p></div></article>
+        </div><p class="note">* Ilustrasi di atas adalah contoh materi yang dapat dipelajari, bukan klaim hasil atau karya siswa tertentu.</p>
+      </div>
+    </section>
+    <section class="about" id="tentang"><div class="shell about-grid"><div class="about-art" aria-hidden="true"><div class="logo-big">&lt;/&gt;</div><span>Think → Build → Understand</span></div><div><div class="eyebrow">TENTANG TUTOR</div><h2>Halo, saya Faris.</h2><p>Saya tutor coding privat yang percaya bahwa siswa seharusnya tidak hanya mampu menjalankan program, tetapi juga bisa menjelaskan <strong>mengapa program itu bekerja</strong>.</p><p>Karena itu, sesi saya mengutamakan analogi nyata, pemecahan masalah bertahap, dan eksperimen langsung dengan kode. Untuk mahasiswa, fokusnya adalah memahami dan menguji kode secara mandiri—bukan menggantikan pekerjaan akademiknya.</p><div class="values"><span>Top-down learning</span><span>Problem-first</span><span>Personal 1-on-1</span></div></div></div></section>
+    <section class="faq" id="faq"><div class="shell faq-grid"><div><div class="eyebrow">PERTANYAAN UMUM</div><h2 style="margin-top:13px">Sebelum kita mulai.</h2><p class="muted" style="margin-top:16px">Beberapa hal yang biasanya ingin diketahui calon siswa dan orang tua.</p></div><div class="faq-list">
+      <details><summary>Apakah anak yang benar-benar pemula bisa ikut?</summary><p>Bisa. Materi dimulai dari cara berpikir logis, analogi sederhana, lalu praktik bertahap. Titik awal disesuaikan dengan pengalaman siswa.</p></details>
+      <details><summary>Apakah lesnya online dan privat?</summary><p>Ya, rancangan layanan ini untuk sesi online 1-on-1. Jadwal serta platform pertemuan disepakati saat konsultasi.</p></details>
+      <details><summary>Apakah mahasiswa bisa membawa kode atau notebook sendiri?</summary><p>Bisa. Sampaikan bahasa pemrograman, tujuan, dan masalah yang dialami agar ruang lingkup pendampingan bisa dinilai terlebih dahulu.</p></details>
+      <details><summary>Apakah tutor mengerjakan tugas atau tesis mahasiswa?</summary><p>Tidak. Sesi berfokus pada penjelasan konsep, penelusuran bug, pengujian, dan pendampingan agar mahasiswa dapat memahami serta mengerjakan pekerjaan akademiknya sendiri.</p></details>
+      <details><summary>Bagaimana biaya dan jadwalnya?</summary><p>Biaya dan jadwal ditentukan berdasarkan jenis layanan, durasi, serta kompleksitas kebutuhan. Hubungi saya langsung melalui WhatsApp untuk membahas kebutuhan dan ketersediaan sesi.</p></details>
+    </div></div></section>
+    <section class="contact" id="konsultasi">
+      <div class="shell contact-grid">
+        <div>
+          <div class="eyebrow light">HUBUNGI VIA WHATSAPP</div>
+          <h2>Ceritakan tujuan belajar atau kendala kode Anda.</h2>
+          <p>Tidak perlu mengisi formulir. Pilih jenis kebutuhan, lalu kirim pesan langsung melalui WhatsApp. Pesan awal disiapkan otomatis agar percakapan lebih mudah dimulai.</p>
+          <div class="contact-points"><span>Diskusi kebutuhan dan level awal</span><span>Informasi sesi, jadwal, dan biaya</span><span>Belajar privat online 1-on-1</span></div>
+        </div>
+        <div class="wa-panel">
+          <div class="wa-panel-top"><span class="wa-online-dot"></span> PILIH TOPIK PERCAKAPAN</div>
+          <a class="wa-choice" data-wa="belajar" href="#konsultasi">
+            <span class="wa-icon" aria-hidden="true">01</span>
+            <span class="wa-choice-copy"><strong>Belajar Coding</strong><small>Untuk siswa SMP–SMA, pemula, dan orang tua</small></span>
+            <span class="wa-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="wa-choice" data-wa="bedah" href="#konsultasi">
+            <span class="wa-icon" aria-hidden="true">02</span>
+            <span class="wa-choice-copy"><strong>Bedah Kode</strong><small>Untuk mahasiswa S1, S2, S3, dan peneliti</small></span>
+            <span class="wa-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="wa-panel-bottom">
+            <span class="wa-mark" aria-hidden="true">✆</span>
+            <span>Pesan akan dibuka di aplikasi WhatsApp.<br>Tidak ada formulir atau data yang disimpan di website.</span>
+          </div>
+          <p class="wa-demo-note" id="wa-demo-note" hidden role="status">Mode preview: nomor WhatsApp tutor belum diisi. Edit konstanta <code>WHATSAPP_NUMBER</code> pada file <code>index.html</code> agar semua tombol langsung membuka chat Anda.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <a class="wa-float" data-wa="umum" href="#konsultasi" aria-label="Hubungi via WhatsApp"><span aria-hidden="true">✆</span><span>Chat via WhatsApp</span></a>
+  <footer><div class="shell footer-inner"><span>© <span id="year"></span> Faris Priadi · Private Coding Tutor</span><span>Website statis GitHub Pages · <a href="#konsultasi" data-wa="umum">Hubungi via WhatsApp ↗</a></span></div></footer>
+  <script>
+    // TODO: Ubah menjadi nomor WhatsApp Anda dengan kode negara, tanpa '+' dan tanpa nol awal.
+    // Contoh format: "6281234567890". Kosongkan jika masih preview.
+    const WHATSAPP_NUMBER = "";
+
+    const modes = {
+      belajar: {
+        file: 'quiz_python.py',
+        code: '<span class="comment"># Mini project: kuis sederhana</span>\npertanyaan = <span class="literal">"2 + 3 = ?"</span>\njawaban = <span class="function">input</span>(pertanyaan)\n\n<span class="keyword">if</span> jawaban == <span class="literal">"5"</span>:\n    <span class="function">print</span>(<span class="literal">"Hebat! Benar 🎉"</span>)\n<span class="keyword">else</span>:\n    <span class="function">print</span>(<span class="literal">"Coba lagi"</span>)',
+        out: '&gt; 2 + 3 = ? 5<br>&gt; Hebat! Benar 🎉'
+      },
+      bedah: {
+        file: 'debug_notebook.py',
+        code: '<span class="comment"># Mengapa hasilnya error?</span>\nnilai = [<span class="literal">"70"</span>, <span class="literal">"85"</span>, <span class="literal">"90"</span>]\n\n<span class="comment"># Ubah teks jadi angka dahulu</span>\nnilai_angka = [<span class="function">int</span>(x) <span class="keyword">for</span> x <span class="keyword">in</span> nilai]\n\nrata_rata = <span class="function">sum</span>(nilai_angka) / <span class="function">len</span>(nilai_angka)\n<span class="function">print</span>(<span class="function">round</span>(rata_rata, <span class="literal">2</span>))',
+        out: '&gt; 81.67<br>✓ Tipe data diperbaiki, kode berjalan.'
+      }
+    };
+    document.querySelectorAll('[data-mode]').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      const mode = modes[btn.dataset.mode];
+      document.getElementById('editor-filename').textContent = mode.file;
+      document.getElementById('code-demo').innerHTML = mode.code;
+      document.getElementById('demo-output').innerHTML = mode.out;
+    }));
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') !== 'true';
+      menuBtn.setAttribute('aria-expanded', String(expanded)); navLinks.classList.toggle('open', expanded);
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+    // Semua tombol konsultasi memakai WhatsApp. Masukkan nomor WA Anda di bawah,
+    // dengan kode negara tanpa '+' atau nol depan. Contoh bentuk: "628xxxxxxxxxx".
+    // Dalam preview, biarkan kosong agar tidak mengarahkan pengunjung ke nomor palsu.
+    const whatsappNumber = WHATSAPP_NUMBER.replace(/\D/g, '');
+    const whatsappMessages = {
+      umum: 'Halo Pak Faris, saya menemukan website les privat coding Anda. Saya ingin bertanya mengenai layanan, jadwal, dan biaya sesi privat.',
+      belajar: 'Halo Pak Faris, saya tertarik dengan les privat Belajar Coding untuk pemula/SMP–SMA. Boleh dibantu informasi mengenai alur belajar, jadwal, dan biaya?',
+      bedah: 'Halo Pak Faris, saya mahasiswa/peneliti dan ingin berkonsultasi mengenai pendampingan Bedah Kode. Boleh saya jelaskan teknologi yang digunakan serta kendala yang saya alami?'
+    };
+    document.querySelectorAll('[data-wa]').forEach(link => {
+      const key = link.dataset.wa;
+      const msg = whatsappMessages[key] || whatsappMessages.umum;
+      if (whatsappNumber.length >= 10 && whatsappNumber.length <= 15) {
+        link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      } else {
+        link.href = '#konsultasi';
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          document.getElementById('wa-demo-note').hidden = false;
+          document.getElementById('konsultasi').scrollIntoView({behavior: 'smooth', block: 'center'});
+        });
+      }
+    });
+  </script>
+</body>
+</html>
