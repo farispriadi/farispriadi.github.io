@@ -121,12 +121,21 @@ section { padding-block:81px; }
 .project-body h3 { font-size:19px; margin-top:10px; }
 .project-body p { font-size:13px; color:var(--muted); margin-top:9px; }
 .note { margin-top:17px; font-size:12px; color:#52647A; }
-.about-grid { display:grid; grid-template-columns:.75fr 1.25fr; gap:73px; align-items:center; }
-.about-art { background:#F1F5FA; min-height:305px; border:1px solid #E4EBF3; border-radius:13px; display:grid; place-items:center; position:relative; overflow:hidden; }
+.about-grid { display:grid; grid-template-columns:.78fr 1.22fr; gap:73px; align-items:center; }
+.about-art { display:flex; align-items:center; justify-content:center; min-height:0; padding:0; }
 .about-art::before { display:none; }
-.about-art .logo-big { font-size:80px; line-height:1; letter-spacing:-.14em; font-weight:850; color:#31577D; transform:none; }
-.about-art span { position:absolute; bottom:24px; right:24px; background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 12px; font-size:11px; font-weight:750; transform:none; }
+.about-photo-wrap { width:min(100%, 308px); aspect-ratio:4/5; background:#F5F8FC; border-radius:14px; overflow:hidden; border:1px solid #E2EAF3; box-shadow:0 7px 24px rgba(27,49,80,.035); }
+.about-photo { width:100%; height:100%; object-fit:cover; display:block; }
+
 .about h2 { margin:13px 0 19px; }
+.credibility { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+.cred-lead { font-size:13px; margin-top:23px!important; color:var(--muted); }
+.cred-link { display:inline-flex; align-items:center; gap:9px; padding:11px 14px; border:1px solid #D7E2EE; border-radius:10px; background:#fff; color:var(--deep); font-size:14px; font-weight:690; }
+.cred-link:hover { background:#F7FAFD; border-color:#C1D4E7; }
+.cred-link strong { font-size:14px; }
+.cred-link small { display:block; color:var(--muted); font-size:11px; font-weight:600; line-height:1.35; }
+.cred-icon { width:34px; height:34px; display:grid; place-items:center; border-radius:9px; background:#EEF4FB; color:#1B5CA8; font-size:11px; font-weight:800; flex-shrink:0; }
+.cred-note { margin-top:13px; font-size:12px; color:var(--muted); }
 .about p { color:var(--muted); }
 .about p strong { color:var(--ink); }
 .values { display:flex; flex-wrap:wrap; gap:9px; margin-top:22px; }
@@ -186,7 +195,8 @@ footer { background:#fff; border-top:1px solid var(--line); padding:26px 0; colo
  .steps,.project-grid { grid-template-columns:1fr; gap:17px; }
  .step { padding-top:18px; }
  .project-visual { height:150px; }
- .about-art { min-height:220px; }
+ .about-art { min-height:0; padding:0; }
+ .about-photo-wrap { width:min(100%, 230px); }
  .faq-grid { gap:22px; }
  .contact-grid { gap:29px; }
  .wa-panel { padding:17px; }
@@ -264,7 +274,7 @@ jawaban = <span class="function">input</span>(pertanyaan)
         </div><p class="note">* Ilustrasi di atas adalah contoh materi yang dapat dipelajari, bukan klaim hasil atau karya siswa tertentu.</p>
       </div>
     </section>
-    <section class="about" id="tentang"><div class="shell about-grid"><div class="about-art" aria-hidden="true"><div class="logo-big">&lt;/&gt;</div><span>Think → Build → Understand</span></div><div><div class="eyebrow">TENTANG TUTOR</div><h2>Halo, saya Faris.</h2><p>Saya tutor coding privat yang percaya bahwa siswa seharusnya tidak hanya mampu menjalankan program, tetapi juga bisa menjelaskan <strong>mengapa program itu bekerja</strong>.</p><p>Karena itu, sesi saya mengutamakan analogi nyata, pemecahan masalah bertahap, dan eksperimen langsung dengan kode. Untuk mahasiswa, fokusnya adalah memahami dan menguji kode secara mandiri—bukan menggantikan pekerjaan akademiknya.</p><div class="values"><span>Top-down learning</span><span>Problem-first</span><span>Personal 1-on-1</span></div></div></div></section>
+    <section class="about" id="tentang"><div class="shell about-grid"><div class="about-art"><div class="about-photo-wrap"><img class="about-photo" src="profile-clean.webp" alt="Foto Faris Priadi, tutor coding privat" width="720" height="900" loading="lazy" decoding="async"></div></div><div><div class="eyebrow">TENTANG TUTOR</div><h2>Halo, saya Faris.</h2><p>Saya tutor coding privat yang percaya bahwa siswa seharusnya tidak hanya mampu menjalankan program, tetapi juga bisa menjelaskan <strong>mengapa program itu bekerja</strong>.</p><p>Karena itu, sesi saya mengutamakan analogi nyata, pemecahan masalah bertahap, dan eksperimen langsung dengan kode. Untuk mahasiswa, fokusnya adalah memahami dan menguji kode secara mandiri—bukan menggantikan pekerjaan akademiknya.</p><div class="values"><span>Top-down learning</span><span>Problem-first</span><span>Personal 1-on-1</span></div><p class="cred-lead">Kenali latar belakang dan profil publik saya:</p><div class="credibility"><a class="cred-link" href="https://www.superprof.co.id/coding-assignments-dan-materi-programming-yang-rumit-sering-kali-menjadi-tantangan-besar-kami-hadir-untuk-membantu-anda.html" target="_blank" rel="noopener noreferrer" aria-label="Lihat profil tutor Faris Priadi di Superprof"><span class="cred-icon">SP</span><span><strong>Profil Superprof</strong><small>Profil les privat publik ↗</small></span></a><a class="cred-link" href="https://www.linkedin.com/in/faris-priadi/" target="_blank" rel="noopener noreferrer" aria-label="Lihat profil profesional Faris Priadi di LinkedIn"><span class="cred-icon">in</span><span><strong>LinkedIn</strong><small>Profil profesional publik ↗</small></span></a></div></div></div></section>
     <section class="faq" id="faq"><div class="shell faq-grid"><div><div class="eyebrow">PERTANYAAN UMUM</div><h2 style="margin-top:13px">Sebelum kita mulai.</h2><p class="muted" style="margin-top:16px">Beberapa hal yang biasanya ingin diketahui calon siswa dan orang tua.</p></div><div class="faq-list">
       <details><summary>Apakah anak yang benar-benar pemula bisa ikut?</summary><p>Bisa. Materi dimulai dari cara berpikir logis, analogi sederhana, lalu praktik bertahap. Titik awal disesuaikan dengan pengalaman siswa.</p></details>
       <details><summary>Apakah lesnya online dan privat?</summary><p>Ya, rancangan layanan ini untuk sesi online 1-on-1. Jadwal serta platform pertemuan disepakati saat konsultasi.</p></details>
